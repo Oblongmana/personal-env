@@ -9,7 +9,8 @@ source ~/.bash_profile_pub
 ```
 
 If you're using the repo as the master, you'll probably want to create a [hard] link to the repo
-```
+
+```bash
 cd ~
 ln path/to/.bash_profile_pub
 ```
