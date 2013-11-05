@@ -1,0 +1,78 @@
+#_BEGIN IMPORT OF PERSONAL, NON-PRIVATE BASH_PROFILE ELEMENTS_
+#
+#Import into .bash_profile by adding the line
+# source ~/.bash_profile_pub
+#
+#If using repo as the "master", recommend a hard link rather than just copying
+# $ cd ~
+# $ ln path/to/.bash_profile_pub
+
+
+# ALIASING
+
+## Alias hub as git
+eval "$(hub alias -s)"
+
+## personal aliases
+alias git-history="git log --pretty=format:'%ad | %s'"
+alias reload-bash-profile=". ~/.bash_profile"
+
+## gcc pls
+export CC=gcc
+
+
+# FUNCTIONS
+
+## Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+## Lazy but also possibly a bit safer way to wipe a directory - hides it behind a prompt at least!
+function rm* {
+    read -p "Are you sure you want to permanently empty the current directory? " -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        command rm -r .* *
+    fi
+}
+
+## Get a server's cert; useful for dealing with ssl auth integration problems
+function pull-server-cert {
+    command openssl s_client -showcerts -connect $1 </dev/null
+}
+
+## Functions for connecting to vpn from terminal
+function vpn-connect {
+    if [ -z "$1" ]
+      then
+        echo "Please supply the vpn name"
+        return 1
+    fi
+    /usr/bin/env osascript <<-EOF
+    tell application "System Events"
+            tell current location of network preferences
+                    set VPN to service "$1" -- your VPN name here
+                    if exists VPN then 
+                        connect VPN
+                    end if
+            end tell
+    end tell
+EOF
+}
+
+function vpn-disconnect {
+    if [ -z "$1" ]
+      then
+        echo "Please supply the vpn name"
+        return 1
+    fi
+    /usr/bin/env osascript <<-EOF
+    tell application "System Events"
+            tell current location of network preferences
+                    set VPN to service "$1" -- your VPN name here
+                    if exists VPN then disconnect VPN
+            end tell
+    end tell
+EOF
+}
+
+#_END IMPORT OF PERSONAL, NON-PRIVATE BASH_PROFILE ELEMENTS_
