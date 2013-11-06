@@ -40,6 +40,11 @@ function pull-server-cert {
     command openssl s_client -showcerts -connect $1 </dev/null
 }
 
+## Find something in .bash_history
+function find-history {
+    command cat ~/.bash_history | grep $1
+}
+
 ## Functions for connecting to vpn from terminal
 function vpn-connect {
     if [ -z "$1" ]
