@@ -8,6 +8,10 @@
 # $ ln path/to/.bash_profile_pub
 
 
+# ENV VARS
+export PS1='\u@\h$ '
+
+
 # ALIASING
 
 ## Alias hub as git
