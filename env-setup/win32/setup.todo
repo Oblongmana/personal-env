@@ -1,0 +1,43 @@
+win32 environment setup:
+  Download:
+    ☐ 1Password:                    https://agilebits.com/downloads
+    ☐ Dropbox:                      https://www.dropbox.com/downloading?src=index
+    ☐ RailsInstaller (Ruby 1.9.3):  http://railsinstaller.org/en
+    ☐ Git:                          http://git-scm.com/download/win
+    ☐ Sublime Text 3:               http://www.sublimetext.com/3
+    ☐ git-connect:                  http://github.com/oblongmana/git-connect.git
+    ☐ PuTTY:                        http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+    ☐ Plink:                       http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+    ☐ Pageant:                      http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+    ☐ PuTTYgen:                     http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+  Install & Configure:
+    ☐ Dropbox:
+      Install:
+        ☐ Selective Sync: root only
+    ☐ 1Password
+      Install:
+        ☐ Accept Defaults
+        ☐ Add license
+    ☐ RailsInstaller
+      Install:
+        ☐ Accept Defaults
+      Configure:
+        ☐ U: James Hill; E: oblongmana@gmail.com
+        ☐ Copy SSH Public key to github
+    ☐ Git
+      Install:
+        ☐ Accept default, EXCEPT
+          ☐ Choose "Run Git from the Windows Command Prompt" when asked
+    ☐ Sublime Text 3:
+      Install:
+        ☐ Add to Context Menu
+      Configure:
+        ☐ Win+R: "C:\Program Files (x86)\Git\bin\sh.exe" --login -i
+          ☐ $ cd $APPDATA/Sublime\ Text\ 3
+          ☐ $ curl -L https://github.com/Oblongmana/sublime-text-3-env/raw/master/Sublime-Text-3.tar.gz | tar -zx
+        ☐ Open Sublime Text 3
+          ☐ Observe that interface reflects theming from downloaded sublime-text-3-env [OR, wonder why it doesn't]
+          ☐ Add license
+          ☐ Install Package Control as per https://sublime.wbond.net/installation
+          
+
