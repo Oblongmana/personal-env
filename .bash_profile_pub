@@ -10,6 +10,7 @@
 
 # ENV VARS
 export PS1='\u@\h$ '
+# export EDITOR="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" #need to check this actually works?
 
 
 # ALIASING
@@ -20,6 +21,7 @@ eval "$(hub alias -s)"
 ## personal aliases
 alias git-history="git log --pretty=format:'%ad | %s'"
 alias reload-bash-profile=". ~/.bash_profile"
+alias git-tree='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 ## gcc pls
 export CC=gcc
