@@ -7,7 +7,7 @@ win32 environment setup:
     ☐ Sublime Text 3:               http://www.sublimetext.com/3
     ☐ git-connect:                  http://github.com/oblongmana/git-connect.git
     ☐ PuTTY:                        http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-    ☐ Plink:                       http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+    ☐ Plink:                        http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
     ☐ Pageant:                      http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
     ☐ PuTTYgen:                     http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
   Install & Configure:
@@ -22,7 +22,7 @@ win32 environment setup:
       Install:
         ☐ Accept Defaults
       Configure:
-        ☐ U: James Hill; E: oblongmana@gmail.com
+        ☐ U: [James Hill]; E: [oblongmana@gmail.com]
         ☐ Copy SSH Public key to github
     ☐ Git
       Install:
@@ -33,6 +33,7 @@ win32 environment setup:
         ☐ Add to Context Menu
       Configure:
         ☐ Win+R: "C:\Program Files (x86)\Git\bin\sh.exe" --login -i
+          - Note that this section sets things up how I like it - Phoenix Light theme, custom colour scheme derived from MK, Menlo font, size 10, tab size 4, ruler at 80 with wrap at 120. That can all be tweaked by editing Packages/User/Preferences.sublime-settings
           ☐ $ cd $APPDATA/Sublime\ Text\ 3
           ☐ $ curl -L https://github.com/Oblongmana/sublime-text-3-env/raw/master/Sublime-Text-3.tar.gz | tar -zx
         ☐ Open Sublime Text 3
