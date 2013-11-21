@@ -20,3 +20,5 @@ If you're using the repo as the master, you'll probably want to create a [hard] 
 cd ~
 ln path/to/.bash_profile_pub
 ```
+
+Creating the hard link to your local repo will allow you to tweak the `.bash_profile_pub` inside the local repo, and have your actual bash profile update automatically wihtout having to shuffle files every time. In addition, once you've loaded it once, you'll also have an alias `reload-bash-profile` that will reload your bash profile on the fly within a terminal session (i.e., executes `. ~/.bash_profile`)
