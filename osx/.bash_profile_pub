@@ -22,6 +22,7 @@ eval "$(hub alias -s)"
 alias git-history="git log --pretty=format:'%ad | %s'"
 alias reload-bash-profile=". ~/.bash_profile"
 alias git-tree='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias subl-new-from-dir='subl -n $(pwd)'
 
 ## gcc pls
 export CC=gcc
