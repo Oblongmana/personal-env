@@ -52,6 +52,15 @@ function find-history {
     command cat ~/.bash_history | grep $1
 }
 
+## Start a server, serving the current dir
+function serve {
+    if [ -z "$1" ]; then
+        command python -m SimpleHTTPServer
+    else
+        command python -m SimpleHTTPServer $1
+    fi
+}
+
 ## Functions for connecting to vpn from terminal
 function vpn-connect {
     if [ -z "$1" ]
